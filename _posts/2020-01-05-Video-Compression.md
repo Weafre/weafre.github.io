@@ -11,3 +11,4 @@ decoder behavior without defining the encoder. So, the principles of those techn
 <img src="/home/weafre/weafre.github.io/_posts" alt="Video codec 2">
 <img src="/_posts/videoCodec.png" alt="Video codec 3">
 
+<li><a href="/_posts/videoCodec.png">image</a></li>
