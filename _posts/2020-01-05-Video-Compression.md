@@ -12,7 +12,7 @@ decoder behavior without defining the encoder. So, the principles of those techn
 <figure>
  <img src='{{site.url}}/images/videoCodec.png' alt='Video coding standardization ' style="width:640px;height:400px;" class="center"/>
  <figcaption>
- Video coding standardization by <a href="https://www.slideshare.net/MathiasWien/trends-and-recent-developments-in-video-coding-standardization">placekitten.com</a>
+ Video coding standardization by <a href="https://www.slideshare.net/MathiasWien/trends-and-recent-developments-in-video-coding-standardization">RWTH AACHEN</a>
  </figcaption>
 </figure>
 
