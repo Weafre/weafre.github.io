@@ -4,11 +4,10 @@ date: 2020-03-12
 ---
 
 <ol>
-<li>Default dict</li>
+<li>  Default dict</li>
 <p>Create a library to store anytype of value with a string as key. Example </p>
 <pre><code>
 	from collections import defaultdict
-
 	city_state=       defaultdict(list)
 	lis=[('vietnam','hanoi'),('vietnam','danang'), ('france','paris')]
 	for country,city in lis:
