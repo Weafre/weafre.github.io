@@ -18,3 +18,9 @@ for country, city in city_state.items():
 comment: join() is use to concatenate string of a iterable variable. Output is: 
 vietnam hanoi,danang
 france paris
+
+2/ action_space=gym.space.discrete(8)
+action_space.sample()
+x=choice(action_space.n,p=[0,1,0..])
+action_space.contains(x)
+
