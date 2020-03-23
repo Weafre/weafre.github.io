@@ -1,3 +1,4 @@
+---
 layout: post
 title: "Some coding notes"
 date: 2020-03-12
