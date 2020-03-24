@@ -54,12 +54,16 @@ li {
     color: #1E90FF;
 }
 
+ul li a{
+    list-style: none;
+}
 
-
-/*li {
+li {
   float: left;
-}*/
-
+}
+ol li {
+    float: none;
+}
 li a {
   display: block;
   color: #1E90FF;
