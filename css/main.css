@@ -73,8 +73,8 @@ li a:hover {
   background-color: #F2F3F4;
 }*/
 .cropped1 {
-    width: 200px; /* width of container */
-    height: 200px; /* height of container */
+    width: 280px; /* width of container */
+    height: 280px; /* height of container */
     object-fit: cover;
     /*border: 5px solid black;*/
 }
