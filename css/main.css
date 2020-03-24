@@ -68,13 +68,16 @@ li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
+/* Change the link color to #111 (black) on hover 
 li a:hover {
   background-color: #F2F3F4;
-}
+}*/
 .cropped1 {
     width: 200px; /* width of container */
     height: 200px; /* height of container */
     object-fit: cover;
     /*border: 5px solid black;*/
+}
+img {
+  float: left;
 }
