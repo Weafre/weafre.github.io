@@ -17,10 +17,10 @@ date: 2020-03-12
 	  print(country,','.join(city))
 </code></pre>
 
-<p>comment: join() is use to concatenate string of a iterable variable. Output is: </p>
+<p>comment: join() is use to concatenate string of a iterable variable. Output is: 
 vietnam hanoi,danang
 france paris
-
+</p>
 <li>Space discrete</li>
 <pre><code>
 action_space=gym.space.discrete(8)
