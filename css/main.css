@@ -47,6 +47,9 @@ ul.posts li {
   margin-right: auto;
 }
 
-ol {
-font:24px "Arial",san-serif;
+li {
+    font-size: 2.0em;
+    line-height: 1.4em;
+    color: #1E90FF;
 }
+
