@@ -54,13 +54,7 @@ li {
     color: #1E90FF;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
+
 
 li {
   float: left;
@@ -76,5 +70,11 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: #111;
+  background-color: #F2F3F4;
+}
+.cropped1 {
+    width: 200px; /* width of container */
+    height: 200px; /* height of container */
+    object-fit: cover;
+    /*border: 5px solid black;*/
 }
