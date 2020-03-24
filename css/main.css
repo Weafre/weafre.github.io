@@ -41,6 +41,7 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+    float: none;
 }
 .center {
   display: block;
