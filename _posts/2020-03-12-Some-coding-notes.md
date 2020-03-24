@@ -5,8 +5,8 @@ date: 2020-03-12
 ---
 
 <ol>
-<li>  Default dict</li>
-<li>  Default dict2</li>
+<li>  Default dict </li>
+<li>  Default dict2 </li>
 <p>Create a library to store anytype of value with a string as key. Example </p>
 <pre><code>
 	from collections import defaultdict
@@ -22,7 +22,7 @@ date: 2020-03-12
 vietnam hanoi,danang
 france paris
 </p>
-<li>Space discrete</li>
+<li>Space discrete </li>
 <pre><code>
 action_space=gym.space.discrete(8)
 action_space.sample()
