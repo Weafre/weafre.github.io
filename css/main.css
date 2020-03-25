@@ -57,7 +57,7 @@ li {
     color: #1E90FF;
 }
 ul li a {
-  
+  text-align: left;
   color: #1E90FF;
   text-decoration: none;
 }
