@@ -56,7 +56,11 @@ li {
     line-height: 1.4em;
     color: #1E90FF;
 }
-
+ul li a {
+  
+  color: #1E90FF;
+  text-decoration: none;
+}
 
 
 li {
