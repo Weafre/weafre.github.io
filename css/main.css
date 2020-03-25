@@ -42,7 +42,6 @@ ul.posts {
 ul.posts li {
     list-style: none;
     float: none;
-
 }
 
 .center {
@@ -65,8 +64,9 @@ ul li{
 
 
 li {
-  float: left;
-  display: inline;
+    text-align: left;
+  /*float: left;
+  display: inline;*/
 }
 ol li {
     float: none;
