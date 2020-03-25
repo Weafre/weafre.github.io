@@ -94,6 +94,16 @@ li a:hover {
     object-fit: cover;
     /*border: 5px solid black;*/
 }
+.croppedvideostd {
+    width: 640px; /* width of container */
+    height: 480px; /* height of container */
+    object-fit: cover;
+    float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+    /*border: 5px solid black;*/
+}
 img {
   float: left;
 }
