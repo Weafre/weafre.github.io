@@ -56,7 +56,7 @@ li {
     line-height: 1.4em;
     color: #1E90FF;
 }
-ul li a {
+ul li{
   text-align: left;
   color: #1E90FF;
   text-decoration: none;
@@ -72,7 +72,7 @@ ol li {
 li a {
   display: block;
   color: #1E90FF;
-  text-align: center;
+  /*text-align: center;*/
   padding: 14px 16px;
   text-decoration: none;
 }
