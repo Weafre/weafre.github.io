@@ -60,15 +60,18 @@ ul li{
   text-align: left;
   color: #1E90FF;
   text-decoration: none;
+
 }
 
 
 li {
   float: left;
+  display: inline;
 }
 ol li {
     float: none;
 }
+
 /*li a {
   display: block;
   color: #1E90FF;
