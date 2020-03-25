@@ -42,6 +42,7 @@ ul.posts {
 ul.posts li {
     list-style: none;
     float: none;
+    color: #1E90FF;
 }
 
 .center {
