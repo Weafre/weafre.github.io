@@ -5,7 +5,6 @@ date: 2020-03-12
 ---
 
 <ol>
-<li>  Default dict </li>
 <li>  Default dict2 </li>
 <p>Create a library to store anytype of value with a string as key. Example </p>
 <pre><code>
