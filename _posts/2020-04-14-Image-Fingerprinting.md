@@ -22,7 +22,7 @@ English garden in Munich, Germany
 Suppose that you are having an image that you want to protect, do not alow anyone modify and republish it. But some how bad guys have it and apply some changes on your images such as changing brightness, adding some text, rotate... And what you want is an algorithm to identify an image from internet is a duplicate of your image or not. Using triplet loss for is the first idea come up in my mind. Our problem can be express as finding a mapping function from pixel space to d-dimensional Euclidean space f(x) (in R<sup>d</sup>).  The formula of triplet loss was shown in figure below. 
 </p>
 <figure>
- <img src='{{site.url}}/images/tripletloss.png' alt='Video coding standardization ' style="width:640px;height:100px;" class="center"/>
+ <img src='{{site.url}}/images/tripletloss.png' alt='Video coding standardization ' style="width:480px;height:80px;" class="center"/>
  <figcaption>
  	<center>
 Triplet loss.
@@ -33,10 +33,24 @@ Triplet loss.
 where f<sup>a</sup> is the embedding vector of original image called anchor image,f<sup>b</sup> is embedding vector of modified image (positive image) and f<sup>n</sup> is for negative image (any other image except anchor and its replicas). By using this loss, we are maximize L2 distance between anchor and negative while minimize L2 distance between anchor and its duplicates. If we found the optimal function, the embedding of anchor and positive will be identical and diffrent to the embedding of negative (how far is depend on the alpha).
 </p>
 <figure>
- <img src='{{site.url}}/images/triplet_training.png' alt='Video coding standardization ' style="width:640px;height:100px;" class="center"/>
+ <img src='{{site.url}}/images/triplet_training.png' alt='Video coding standardization ' style="width:480px;height:80px;" class="center"/>
  <figcaption>
  	<center>
 Triplet training.
  </center>
  </figcaption>
 </figure>
+<p style="font-size:110%;">
+There is a problem with the loss function. Let assume that positive distance =0.5, negative distance =0.9 and alpha =0.3. Then the loss will be 0.5-0.9+0.3=-0.1 a negative value and our final loss will be max (0,loss)=0 and our model will not improve even we still want to have a smaller positive distance and bigger negative distance. There is a proposal to solve this problem by limit output by a sigmoid activation function in the last layer and use the loss less triplet loss as below: 
+</p>
+<figure>
+ <img src='{{site.url}}/images/lossLess.png' alt='Video coding standardization ' style="width:480px;height:80px;" class="center"/>
+ <figcaption>
+ 	<center>
+Lossless triplet loss
+ </center>
+ </figcaption>
+</figure>
+<p> 
+[Lossless Tripletloss] https://towardsdatascience.com/lossless-triplet-loss-7e932f990b24
+</p>
