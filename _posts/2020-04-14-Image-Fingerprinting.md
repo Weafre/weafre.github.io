@@ -100,7 +100,7 @@ I use 3 identical ResNet 18 base model to train triplet loss (Deep Network block
 	<li>
 		Results
 	</li>
-<p>
+<p style="font-size:110%;" >
  After training for over 90 epochs when training loss is about 3.2 and validation loss equal 0.7, I stop the training (see the loss figure below). I use the base model to extract embedding vector of 1000 test images and save it as embedding database.  1000 randomly choosing test positive and 1000 negative image are use to comput confusion matrix. The test phase was perfomed  and final result are average over 10 runs. Recall, precision and F1 score are 0.95, 0.93 and 0.94 respectively.
 </p>
 <figure>
@@ -120,11 +120,11 @@ Wrongly classified image and distance
  </center>
  </figcaption>
 </figure>
-<p>
+<p style="font-size:110%;">
 	Our model archieve 99.5% percent on the test dataset. The image below shown top 5 image with the closest euclidean distance respect to querying image. The distance to the matched in the top 5 are printed also.
 </p>
 <figure>
- <img src='{{site.url}}/images/top5.jpeg' alt='Video coding standardization ' style="width:640px;height:360px;" class="center"/>
+ <img src='{{site.url}}/images/top5.jpeg' alt='Video coding standardization ' style="width:480px;height:270px;" class="center"/>
  <figcaption>
  	<center>
 Top 5 image correspond to query image.
@@ -139,8 +139,8 @@ Top 5 image correspond to query image.
 
 
 <p style="font-size:110%;"> 
-<a href="https://towardsdatascience.com/lossless-triplet-loss-7e932f990b24">Lossless Tripletloss</a>  <br />
+<a href="https://towardsdatascience.com/lossless-triplet-loss-7e932f990b24">Lossless Tripletloss: https://towardsdatascience.com/lossless-triplet-loss-7e932f990b24</a>  <br />
 
-<a href="https://towardsdatascience.com/image-similarity-using-triplet-loss-3744c0f67973"> Triplet Model </a>
+<a href="https://towardsdatascience.com/image-similarity-using-triplet-loss-3744c0f67973"> Siamese Model: https://towardsdatascience.com/image-similarity-using-triplet-loss-3744c0f67973 </a>
 </p>
 </ol>
