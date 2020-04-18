@@ -113,18 +113,34 @@ Loss over 90 epochs
 </figure>
 
 <figure>
- <img src='{{site.url}}/images/wronglyclassified.jpeg' alt='Video coding standardization ' style="width:480px;height:400px;" class="center"/>
+ <img src='{{site.url}}/images/wronglyclassified.jpeg' alt='Video coding standardization ' style="width:375px;height:221px;" class="center"/>
  <figcaption>
  	<center>
 Wrongly classified image and distance
  </center>
  </figcaption>
 </figure>
+<p>
+	Our model archieve 99.5% percent on the test dataset. The image below shown top 5 image with the closest euclidean distance respect to querying image. The distance to the matched in the top 5 are printed also.
+</p>
+<figure>
+ <img src='{{site.url}}/images/top5.jpeg' alt='Video coding standardization ' style="width:640px;height:360px;" class="center"/>
+ <figcaption>
+ 	<center>
+Top 5 image correspond to query image.
+ </center>
+ </figcaption>
+</figure>
+
+
 <li>
 	References
 </li>
+
+
 <p style="font-size:110%;"> 
-[Lossless Tripletloss] https://towardsdatascience.com/lossless-triplet-loss-7e932f990b24
-[Model] https://towardsdatascience.com/image-similarity-using-triplet-loss-3744c0f67973
+<a href="https://towardsdatascience.com/lossless-triplet-loss-7e932f990b24">Lossless Tripletloss</a>  <br />
+
+<a href="https://towardsdatascience.com/image-similarity-using-triplet-loss-3744c0f67973"> Triplet Model </a>
 </p>
 </ol>
