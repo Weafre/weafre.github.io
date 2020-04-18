@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Image fingerprinting using DNN"
+title: "Image embedding using DNN"
 date: 2020-04-14
 ---
 
@@ -75,7 +75,7 @@ Sample modified images
  </figcaption>
 </figure>
 <p style="font-size:110%;">
-For training, i use 2165 images from imagesNet as anchors. Applying some modifications such that adding text, changing brightness, screenshoot, mixing content to the anchor to create positive images. For negative, I use any image in dataset which are not anchor and positives. The same procedure also perform on another 1000 image from flick used as test dataset. Some sample modified images are shown above.
+For training, i use 2165 images from imagesNet as anchors. Applying some modifications such that adding text, changing brightness, screenshoot, mixing content to the anchor to create positive images. For negative, I use any image in dataset which are not anchor and positives. The same procedure also perform on another 1000 image from flick used as test dataset. All images are converted to black and white image to remove color similarity information. Some sample modified images before converting to black and white are shown above.
 </p>
 <figure>
  <img src='{{site.url}}/images/model.png' alt='Video coding standardization ' style="width:480px;height:360px;" class="center"/>
@@ -86,8 +86,25 @@ Siamese model
  </figcaption>
 </figure>
 <p style="font-size:110%;">
-I use 3 identical ResNet 18 base model (from scratch) to train triplet loss (Deep Network block in the figure above). After training for over 100 epochs when training loss is about 3.2 and validation loss equal 0.7, I stop the training. I use the base model to extract embedding vector of 1000 test images and save it as embedding database.  1000 randomly choosing test positive and 1000 negative image are use to comput confusion matrix. The test phase was perfomed  and final result are average over 10 runs. Recall, precision and F1 score are 0.95, 0.93 and 0.94 respectively.
+I use 3 identical ResNet 18 base model to train triplet loss (Deep Network block in the figure above) with Adam optimizer (lr 5e-4 and then 1e-4 to avoid overfitting). Note that I do not using activation fuction in the last Dense 128 layer. The reason for doing that is using activation introduce lossing information from last Dense layer (Relu remove all negative value, sigmoid saturate all value out of range [0, 1]. After training for over 90 epochs when training loss is about 3.2 and validation loss equal 0.7, I stop the training (see the loss figure below). I use the base model to extract embedding vector of 1000 test images and save it as embedding database.  1000 randomly choosing test positive and 1000 negative image are use to comput confusion matrix. The test phase was perfomed  and final result are average over 10 runs. Recall, precision and F1 score are 0.95, 0.93 and 0.94 respectively.
 </p>
+<figure>
+ <img src='{{site.url}}/images/loss.png' alt='Video coding standardization ' style="width:480px;height:360px;" class="center"/>
+ <figcaption>
+ 	<center>
+Loss over 90 epochs
+ </center>
+ </figcaption>
+</figure>
+
+<figure>
+ <img src='{{site.url}}/images/wronglyclassified.jpeg' alt='Video coding standardization ' style="width:480px;height:360px;" class="center"/>
+ <figcaption>
+ 	<center>
+Wrongly classified image and distance
+ </center>
+ </figcaption>
+</figure>
 <p style="font-size:110%;"> 
 [Lossless Tripletloss] https://towardsdatascience.com/lossless-triplet-loss-7e932f990b24
 [Model] https://towardsdatascience.com/image-similarity-using-triplet-loss-3744c0f67973
