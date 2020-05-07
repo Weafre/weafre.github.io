@@ -139,8 +139,8 @@ Top 5 image correspond to query image.
 
 
 <p style="font-size:110%;"> 
-<a href="https://towardsdatascience.com/lossless-triplet-loss-7e932f990b24">Lossless Tripletloss: https://towardsdatascience.com/lossless-triplet-loss-7e932f990b24</a>  <br />
+<a href="https://towardsdatascience.com/lossless-triplet-loss-7e932f990b24">[1]Lossless Tripletloss: https://towardsdatascience.com/lossless-triplet-loss-7e932f990b24</a>  <br />
 
-<a href="https://towardsdatascience.com/image-similarity-using-triplet-loss-3744c0f67973"> Siamese Model: https://towardsdatascience.com/image-similarity-using-triplet-loss-3744c0f67973 </a>
+<a href="https://towardsdatascience.com/image-similarity-using-triplet-loss-3744c0f67973">[2] Siamese Model: https://towardsdatascience.com/image-similarity-using-triplet-loss-3744c0f67973 </a>
 </p>
 </ol>
