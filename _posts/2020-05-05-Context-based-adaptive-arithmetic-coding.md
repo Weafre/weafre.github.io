@@ -6,7 +6,7 @@ date: 2020-05-05
 <ol>
 
 <li>Arithmetic Coding </li>
-
+<ul>
 <li style="list-style-type:lower-alpha;font-size:120%;color:black;">encoding: using cumula)ve	distribu)on	function of symbols, fit cdf in a range of symbol in sequence and compute new range until end the sequence. Output is any number between final range </li> 
 <li style="list-style-type:lower-alpha;font-size:120%;color:black;">decoding: current value --> find range --> symbol, next value  = (last value-low)/last_range --> range --> symbol  </li>
 <li style="list-style-type:lower-alpha;font-size:120%;color:black;">how does decoder know the end of sequence: specific in metadata or use a special flag in sequence </li>  
@@ -23,7 +23,8 @@ date: 2020-05-05
 			<li style="list-style-type:lower-alpha;font-size:120%;color:black;">	If e2 scaling, output a 1 and then n 0's, where n equals the e3 counter. </li>
 		</ul> 
 </ul>
-
+</li>
+</ul>
 
 
 <p>Decoding:  After we decode each symbol we check our high and low values. If the criteria for an e-scale has been met, we perform the necessary scaling operation but instead of writing out a 0 or a 1, we shift in the next bit from our input stream</p>
@@ -75,6 +76,6 @@ its code values are uniformly distributed on the interval [0, 1). </li>
 	<li>floating point, infinite precision, fixed point</li>
 	<li>optimal bit/symbol for each symbol = -log2(p(s))</li>
 </ul>
-</li>
+
 
 </ol>
