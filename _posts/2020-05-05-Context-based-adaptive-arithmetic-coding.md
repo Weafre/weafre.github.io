@@ -7,7 +7,7 @@ date: 2020-05-05
 
 <li>Arithmetic Coding </li>
 <ul>
-<li style="list-style-type:lower-alpha;font-size:120%;padding:40;color:black;">encoding: using cumula)ve	distribu)on	function of symbols, fit cdf in a range of symbol in sequence and compute new range until end the sequence. Output is any number between final range </li> 
+<li style="list-style-type:lower-alpha;font-size:120%;padding-left:50px;;color:black;">encoding: using cumula)ve	distribu)on	function of symbols, fit cdf in a range of symbol in sequence and compute new range until end the sequence. Output is any number between final range </li> 
 <li style="list-style-type:lower-alpha;font-size:120%;color:black;">decoding: current value --> find range --> symbol, next value  = (last value-low)/last_range --> range --> symbol  </li>
 <li style="list-style-type:lower-alpha;font-size:120%;color:black;">how does decoder know the end of sequence: specific in metadata or use a special flag in sequence </li>  
 <li style="list-style-type:lower-alpha;font-size:120%;color:black;">fixed point coding: instead of using floating point --> use 16 bit, range from 0 to 65535 --> interger number represent sequence. problem: the precision will be limit, there may be a range when can not futher split (s.t.[182-184])  </li>
