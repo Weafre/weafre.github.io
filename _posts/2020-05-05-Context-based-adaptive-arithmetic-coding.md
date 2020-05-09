@@ -126,6 +126,31 @@ Number of bit of code value
 that the sequence S = {2; 1; 0; 0; 1; 3} can be transmitted as the sequence of electrical
 signals {+V, 0, +V, 0, 0, -V, -V, -V} </li>
 </ul>
+<li style="font-size:140%;color:blue;" > Arithmetic Coding Properties </li>
+<ul>
+	<li style="list-style-type:lower-alpha;font-size:16px;color:black;"> Dynamic Sources: generalize arithmetic coding for situations where the probabilities
+change for each symbol coded, i.e., the k-th symbol in the data sequence S is a random
+variable with probabilities pk and distribution ck. For example: Instead of having a single input alphabet with M symbols, we have a sequence of alphabet sizes {M1; M2; : : : ; MN}.</li>
+
+<li style="list-style-type:lower-alpha;font-size:16px;color:black;">Encoder and Decoder Synchronized Decisions: the probability of sequence does not have to transparent to decoder as long as the probability is updated along sequence, from previous decoded symbol.</li>
+</ul>
+<figure>
+ <img src='{{site.url}}/images/sourcemodeling.png' alt='independent and identically distributed definition ' style="width:160;height:160px;" class="center"/>
+ <figcaption>
+ 	<center>
+
+ </center>
+ </figcaption>
+</figure>
+
+<li style="list-style-type:lower-alpha;font-size:16px;color:black;">Separation of Coding and Source Modeling: it allows us to develop
+complex compression schemes without worrying about the details in the coding algorithm,
+and/or use them with difierent coding methods and implementations..</li>
+<li style="list-style-type:lower-alpha;font-size:16px;color:black;">Interval Rescaling: the actual intervals used during coding depend on the initial interval and the previously coded data, but the
+proportions within subdivided intervals do not. This shows that we can scale interval along with scale code value obtained at a certained level to have a wider interval. And the decoder will need to know information about scaling in order to recover the original code value and start decoding.</li>
+<li style="list-style-type:lower-alpha;font-size:16px;color:black;">
+Approximate Arithmetic: </li>
+
 <li style="list-style-type:circle;font-size:16px;color:black;">  </li>
 
 
