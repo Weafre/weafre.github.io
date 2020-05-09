@@ -17,11 +17,12 @@ date: 2020-05-05
 	<li style="list-style-type:circle;font-size:120%;color:black;">E2: if current range is in the second half (32767-65535), output 1 and scale back to full range (0-65535)  </li>
 	<li style="list-style-type:circle;font-size:120%;color:black;">E3: If our low value is greater than one quarter of our range (16,383), and our high value is less than  
 	three quarters of our range (49,151), then we perform an e3 scaling operation to push both
-	values outward. and keep performing encoding and use counter to specific howmany time in E3 case, then:   </li>
+	values outward. and keep performing encoding and use counter to specific howmany time in E3 case, then:   
 		<ul>
 			<li style="list-style-type:circle;font-size:120%;color:black;">	If e1 scaling, output a 0 and then n 1's, where n equals the e3 counter.  </li>
 			<li style="list-style-type:circle;font-size:120%;color:black;">	If e2 scaling, output a 1 and then n 0's, where n equals the e3 counter. </li>
 		</ul> 
+		</li>
 </ul>
 </li>
 </ul>
@@ -68,6 +69,33 @@ interval [0, 1).</li>
 no statistical dependence or redundancy left in the compressed sequences, and consequently
 its code values are uniformly distributed on the interval [0, 1). </li>
 </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
