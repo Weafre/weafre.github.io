@@ -112,7 +112,21 @@ Number of bit of code value
 sequence, and assign to this symbol the smallest probability value allowed by the
 encoder/decoder. when meet this prob --> end) Arithmetic coding guarantee that difierent sequences cannot produce the same code value </li>
 </ul>
-
+<li style="font-size:140%;color:blue;" >Optimality of Arithmetic Coding: the bit per symbol converge to entropy of the source</li>
+<figure>
+ <img src='{{site.url}}/images/optimality.png' alt='independent and identically distributed definition ' style="width:160;height:160px;" class="center"/>
+ <figcaption>
+ 	<center>
+Number of bit of code value
+ </center>
+ </figcaption>
+</figure>
+<ul>
+	<li style="list-style-type:circle;font-size:16px;color:black;"> The result above is for 2 symbol output (0 and 1, base 2) to represent code value, the code value can be represented by using D symbol output. For example v3 = 0:202001113(base 3)=0.742722146, which means
+that the sequence S = {2; 1; 0; 0; 1; 3} can be transmitted as the sequence of electrical
+signals {+V, 0, +V, 0, 0, -V, -V, -V} </li>
+</ul>
+<li style="list-style-type:circle;font-size:16px;color:black;">  </li>
 
 
 
