@@ -28,11 +28,11 @@ date: 2020-05-05
 </ul>
 
 
-<p>Decoding:  After we decode each symbol we check our high and low values. If the criteria for an e-scale has been met, we perform the necessary scaling operation but instead of writing out a 0 or a 1, we shift in the next bit from our input stream</p>
+<p style="font-size:16px">Decoding:  After we decode each symbol we check our high and low values. If the criteria for an e-scale has been met, we perform the necessary scaling operation but instead of writing out a 0 or a 1, we shift in the next bit from our input stream</p>
 
 <li style="font-size:140%;color:blue;" >Binary Arithmetic Coding</li> only binary (0 and 1 symbol), 2 symbol cdf 
 <li style="font-size:140%;color:blue;" >Adaptive Arithmetic Coding</li> 
-		<p>Probability model: estimating the occurance of 0 and 1 </p>
+		<p style="font-size:16px">Probability model: estimating the occurance of 0 and 1 </p>
 	<ul>
 		<li style="list-style-type:circle;font-size:16px;color:black;">Start by 0.5/0/5 and if meet 0 --> increase rate of 0, if meet 1--> increase rate of 1 </li>
 		<li style="list-style-type:circle;font-size:16px;color:black;">Drawback: cdf may contain inaccurate data leading wrong prob model --> less efficient</li>
@@ -45,7 +45,7 @@ date: 2020-05-05
 		continue using the current context, or switch to another one.</li>
 		<li style="list-style-type:circle;font-size:16px;color:black;">While a context is active, it's probabilities are updated in the same manner as our adaptive binary
 		coder</li>
-		<p>This gives us the ability to adapt to large or global
+		<p style="font-size:16px">This gives us the ability to adapt to large or global
 		probability changes, while maintaining our ability to adapt to more gradual, or local changes
 		explained my self:  Global change > select the same context/model --> update is perform on that global model  
 		Local change: update only on local model/context  
@@ -64,11 +64,31 @@ Independent and identically distributed
 
 <ul>
 <li style="list-style-type:circle;font-size:16px;color:black;" > Code value representation: coded messages mapped to real numbers in the
-interval [0, 1).</li>
-<li style="list-style-type:circle;font-size:16px;color:black;">The straight-line distribution means that if a coding method is optimal then there is
+interval [0, 1).For example a mapping procedure: put 0. before code, and interpreting the result as a number in
+base-D notation</li>
+<figure>
+ <img src='{{site.url}}/images/codeValue.png' alt='independent and identically distributed definition ' style="width:640;height:320px;" class="center"/>
+ <figcaption>
+ 	<center>
+Simple Code value generated from coded symbols(base 2 in this case)
+ </center>
+ </figcaption>
+</figure>
+
+<li style="list-style-type:circle;font-size:16px;color:black;">How to measure the efficiency of a coding scheme? From Shannon’s information theory [1] we know that, if a
+coding method is optimal, then the cumulative distribution [22] of its code values has to be
+a straight line from point (0, 0) to point (1, 1). The straight-line distribution means that if a coding method is optimal then there is
 no statistical dependence or redundancy left in the compressed sequences, and consequently
 its code values are uniformly distributed on the interval [0, 1). </li>
-
+<figure>
+ <img src='{{site.url}}/images/cdfCodeValue.png' alt='independent and identically distributed definition ' style="width:640;height:320px;" class="center"/>
+ <figcaption>
+ 	<center>
+Cummulative distribution of code value for diffrent coding scheme.
+ </center>
+ </figcaption>
+</figure>
+<li style="list-style-type:circle;font-size:16px;color:black;"> One flnal comment about code values: two inflnitely long difierent sequences can correspond to the same code value. </li>
 </ul>
 
 
