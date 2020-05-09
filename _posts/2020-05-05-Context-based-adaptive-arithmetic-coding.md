@@ -67,7 +67,7 @@ Independent and identically distributed
 interval [0, 1).For example a mapping procedure: put 0. before code, and interpreting the result as a number in
 base-D notation</li>
 <figure>
- <img src='{{site.url}}/images/codeValue.png' alt='independent and identically distributed definition ' style="width:640;height:320px;" class="center"/>
+ <img src='{{site.url}}/images/codeValue.png' alt='independent and identically distributed definition ' style="width:640;height:100px;" class="center"/>
  <figcaption>
  	<center>
 Simple Code value generated from coded symbols(base 2 in this case)
@@ -79,7 +79,7 @@ Simple Code value generated from coded symbols(base 2 in this case)
 coding method is optimal, then the cumulative distribution [22] of its code values has to be
 a straight line from point (0, 0) to point (1, 1). The straight-line distribution means that if a coding method is optimal then there is
 no statistical dependence or redundancy left in the compressed sequences, and consequently
-its code values are uniformly distributed on the interval [0, 1). </li>
+its code values (the code value will independent) are uniformly distributed on the interval [0, 1). </li>
 <figure>
  <img src='{{site.url}}/images/cdfCodeValue.png' alt='independent and identically distributed definition ' style="width:640;height:320px;" class="center"/>
  <figcaption>
@@ -90,7 +90,28 @@ Cummulative distribution of code value for diffrent coding scheme.
 </figure>
 <li style="list-style-type:circle;font-size:16px;color:black;"> One flnal comment about code values: two inflnitely long difierent sequences can correspond to the same code value. </li>
 </ul>
-
+<li style="font-size:140%;color:blue;" >Arithmetic coding</li>
+<ul>
+	<li style="list-style-type:circle;font-size:16px;color:black;">Generating final interval: In order to have an uniform distribution of code value (optimal), the interval lengths must be reduced by factors equal to symbol probabilities. (For example, if 20% of the
+sequences start with symbol \0", then 20% of the code values must be in the interval
+assigned to those sequences, which can only be achieved if we assign to the flrst symbol
+\0" an interval with length equal to its probability, 0.2. The same reasoning applies to
+the assignment of the subinterval lengths: every occurrence of symbol \0" must result
+in a reduction of the interval length to 20% its current length. This way, after encoding several symbols the distribution of code values should be a very good approximation
+of a uniform distribution. Assure the fairness between symbols) </li>
+<li style="list-style-type:circle;font-size:16px;color:black;"> Choose code value by interval value ln: </li>
+<figure>
+ <img src='{{site.url}}/images/selectnumberofbit.png' alt='independent and identically distributed definition ' style="width:160;height:80px;" class="center"/>
+ <figcaption>
+ 	<center>
+Number of bit of code value
+ </center>
+ </figcaption>
+</figure>
+<li style="list-style-type:circle;font-size:16px;color:black;"> Decoding process: How to stop the decoding process :in manifest file or flag symbol (which is coded only at the end of the data
+sequence, and assign to this symbol the smallest probability value allowed by the
+encoder/decoder. when meet this prob --> end) Arithmetic coding guarantee that difierent sequences cannot produce the same code value </li>
+</ul>
 
 
 
