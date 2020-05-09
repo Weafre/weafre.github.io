@@ -62,9 +62,9 @@ Independent and identically distributed
 </figure>
 
 <ul>
-<li> code value representation: coded messages mapped to real numbers in the
+<li style="list-style-type:lower-alpha;font-size:120%;color:black;" > Code value representation: coded messages mapped to real numbers in the
 interval [0, 1).</li>
-<li>The straight-line distribution means that if a coding method is optimal then there is
+<li style="list-style-type:lower-alpha;font-size:120%;color:black;">The straight-line distribution means that if a coding method is optimal then there is
 no statistical dependence or redundancy left in the compressed sequences, and consequently
 its code values are uniformly distributed on the interval [0, 1). </li>
 </ul>
@@ -73,8 +73,8 @@ its code values are uniformly distributed on the interval [0, 1). </li>
 
 <li>Question</li>
 <ul>
-	<li>floating point, infinite precision, fixed point</li>
-	<li>optimal bit/symbol for each symbol = -log2(p(s))</li>
+	<li style="list-style-type:lower-alpha;font-size:120%;color:black;" >floating point, infinite precision, fixed point</li>
+	<li style="list-style-type:lower-alpha;font-size:120%;color:black;">optimal bit/symbol for each symbol = -log2(p(s))</li>
 </ul>
 
 
