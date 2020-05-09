@@ -4,8 +4,8 @@ title: "Context based adaptive arithmetic coding"
 date: 2020-05-05
 ---
 <ol>
-?floating point, infinite precision, fixed point
-<li>ARITHMETIC CODING </li>
+
+<li>Arithmetic Coding </li>
 	<ul>
 	<li style="list-style-type:lower-alpha;font-size:100%;color:black;">encoding: using cumula)ve	distribu)on	function of symbols, fit cdf in a range of symbol in sequence and compute new range until end the sequence. Output is any number between final range </li> 
 	<li style="list-style-type:lower-alpha;font-size:100%;color:black;">decoding: current value --> find range --> symbol, next value  = (last value-low)/last_range --> range --> symbol  </li>
@@ -27,16 +27,16 @@ date: 2020-05-05
 
 <p>Decoding:  After we decode each symbol we check our high and low values. If the criteria for an e-scale has been met, we perform the necessary scaling operation but instead of writing out a 0 or a 1, we shift in the next bit from our input stream</p>
 
-<li>BINARY ARITHMETIC CODING</li>
+<li>Binary Arithmetic Coding</li>
 	only binary (0 and 1 symbol), 2 symbol cdf 
-<li>ADAPTIVE ARITHMETIC CODING</li> 
+<li>Adaptive Arithmetic Coding</li> 
 		probability model: estimating the occurance of 0 and 1 
 	<ul>
 		<li style="list-style-type:lower-alpha;font-size:100%;color:black;">start by 0.5/0/5 and if meet 0 --> increase rate of 0, if meet 1--> increase rate of 1 </li>
 		<li style="list-style-type:lower-alpha;font-size:100%;color:black;">drawback: cdf may contain inaccurate data leading wrong prob model --> less efficient</li>
 	</ul>
 		--> context adaptive
-<li>CONTEXT ADAPTIVE ARITHMETIC CODING</li>
+<li>Context Adaptive Arithmetic Coding</li>
 	<ul>
 		<li style="list-style-type:lower-alpha;font-size:100%;color:black;"> inaccurate data--> less efficient but will be recover over time --> how to recover fast?</li>
 		<li style="list-style-type:lower-alpha;font-size:100%;color:black;">After each symbol is coded, we examine the set of recently processed symbols and decide whether to
@@ -51,13 +51,66 @@ date: 2020-05-05
 	</ul>
 <li>Introduction to arithmetic coding</li>
 
-	<figure>
-	 <img src='{{site.url}}/images/iid.png' alt='independent and identically distributed definition ' style="width:480px;height:320px;" class="center"/>
-	 <figcaption>
-	 	<center>
-	Independent and identically distributed
-	 </center>
-	 </figcaption>
-	</figure>
-	?optimal bit/symbol for each symbol = -log2(p(s))
+<figure>
+ <img src='{{site.url}}/images/iid.png' alt='independent and identically distributed definition ' style="width:480px;height:320px;" class="center"/>
+ <figcaption>
+ 	<center>
+Independent and identically distributed
+ </center>
+ </figcaption>
+</figure>
+
+<ul>
+	<li> code value representation: coded messages mapped to real numbers in the
+interval [0, 1).</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>Question</li>
+<ul>
+	<li>floating point, infinite precision, fixed point</li>
+	<li>optimal bit/symbol for each symbol = -log2(p(s))</li>
+	</ul>
 </ol>
