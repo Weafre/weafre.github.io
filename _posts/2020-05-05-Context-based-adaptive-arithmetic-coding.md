@@ -149,8 +149,33 @@ and/or use them with difierent coding methods and implementations..</li>
 <li style="list-style-type:lower-alpha;font-size:16px;color:black;">Interval Rescaling: the actual intervals used during coding depend on the initial interval and the previously coded data, but the
 proportions within subdivided intervals do not. This shows that we can scale interval along with scale code value obtained at a certained level to have a wider interval. And the decoder will need to know information about scaling in order to recover the original code value and start decoding.</li>
 <li style="list-style-type:lower-alpha;font-size:16px;color:black;">
-Approximate Arithmetic: </li>
+Approximate Arithmetic: Inexact multiplications are mathematically equivalent to making approximations in the
+source model and then using exact multiplications (see example 7). And we do not have to worry about the inexact probabilities, the decoder can decode the exact input sequence as long as encoder and decoder have the same distribution model i.e., if the decoder is making exactly the
+same approximations as the encoder. Therefore we have to pay the compression performance, the coding archieve the optimal performance only when the distribution of symbol are exactly the same as the real distribution. But the loss to pay is reasonably small if the multiplicationi approximate at 4 digit(shown in equation 1.43)</li>
 
+<li style="list-style-type:lower-alpha;font-size:16px;color:black;">
+Conditions for Correct Decoding:
+<ul>
+	<li style="list-style-type:lower-alpha;font-size:16px;color:black;">The interval length must be positive and intervals must be disjoint. Decode error occurs whenever a code value belongs to the intersection. Or when  then the interval length collapses to zero but  we also have to be sure that all symbol probabilities are larger than a
+minimum value deflned by the arithmetic precision</li>
+		<li style="list-style-type:lower-alpha;font-size:16px;color:black;">Sub-intervals must be nested: We have to be sure that the accumulation of the approximation errors, as we continue coding
+symbols, does not move the interval base to a point outside all the previous intervals. This condition is not guarantee in the approximate case. This solved by setting aside small regions, indicated as gray areas in Figure below, that are
+not used for coding, and serve as a safety net allow the sub interval will always inside the previous interval. With reasonable precision, leakage can be made extremely small. For
+instance, if p(s)=p0(s) = 1:001 (low precision) then leakage is less than 0.0015 bits/symbol.</li>
+<li style="list-style-type:lower-alpha;font-size:16px;color:black;">Inverse arithmetic operations must not produce error accumulation. Decoder also introduce approximate subtraction and division, which have to be consistent with the encoder’s approximations</li>
+
+</ul>
+
+
+</li>
+<figure>
+ <img src='{{site.url}}/images/leakage.png' alt='independent and identically distributed definition ' style="width:160;height:160px;" class="center"/>
+ <figcaption>
+ 	<center>
+
+ </center>
+ </figcaption>
+</figure>
 <li style="list-style-type:circle;font-size:16px;color:black;">  </li>
 
 
