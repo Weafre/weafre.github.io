@@ -81,7 +81,7 @@ a straight line from point (0, 0) to point (1, 1). The straight-line distributio
 no statistical dependence or redundancy left in the compressed sequences, and consequently
 its code values (the code value will independent) are uniformly distributed on the interval [0, 1). </li>
 <figure>
- <img src='{{site.url}}/images/cdfCodeValue.png' alt='independent and identically distributed definition ' style="width:500;height:480px;" class="center"/>
+ <img src='{{site.url}}/images/cdfCodeValue.png' alt='independent and identically distributed definition ' style="width:400;height:400px;" class="center"/>
  <figcaption>
  	<center>
 Cummulative distribution of code value for diffrent coding scheme.
@@ -135,7 +135,7 @@ variable with probabilities pk and distribution ck. For example: Instead of havi
 <li style="list-style-type:circle;font-size:16px;color:black;">Encoder and Decoder Synchronized Decisions: the probability of sequence does not have to transparent to decoder as long as the probability is updated along sequence, from previous decoded symbol.</li>
 </ul>
 <figure>
- <img src='{{site.url}}/images/sourcemodeling.png' alt='independent and identically distributed definition ' style="width:480;height:480px;" class="center"/>
+ <img src='{{site.url}}/images/sourcemodeling.png' alt='independent and identically distributed definition ' style="width:400;height:400px;" class="center"/>
  <figcaption>
  	<center>
 
@@ -169,7 +169,7 @@ instance, if p(s)=p0(s) = 1:001 (low precision) then leakage is less than 0.0015
 
 </li>
 <figure>
- <img src='{{site.url}}/images/leakage.png' alt='independent and identically distributed definition ' style="width:480;height:480px;" class="center"/>
+ <img src='{{site.url}}/images/leakage.png' alt='independent and identically distributed definition ' style="width:400;height:400px;" class="center"/>
  <figcaption>
  	<center>
 
