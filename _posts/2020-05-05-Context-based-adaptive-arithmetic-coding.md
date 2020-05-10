@@ -30,14 +30,14 @@ date: 2020-05-05
 
 <p style="font-size:16px">Decoding:  After we decode each symbol we check our high and low values. If the criteria for an e-scale has been met, we perform the necessary scaling operation but instead of writing out a 0 or a 1, we shift in the next bit from our input stream</p>
 
-<li style="font-size:140%;color:blue;" >Binary Arithmetic Coding</li> only binary (0 and 1 symbol), 2 symbol cdf 
+<li style="font-size:140%;color:blue;" >Binary Arithmetic Coding</li> Only binary (0 and 1 symbol), 2 symbol cdf 
 <li style="font-size:140%;color:blue;" >Adaptive Arithmetic Coding</li> 
 		<p style="font-size:16px">Probability model: estimating the occurance of 0 and 1 </p>
 	<ul>
 		<li style="list-style-type:circle;font-size:16px;color:black;">Start by 0.5/0/5 and if meet 0 --> increase rate of 0, if meet 1--> increase rate of 1 </li>
-		<li style="list-style-type:circle;font-size:16px;color:black;">Drawback: cdf may contain inaccurate data leading wrong prob model --> less efficient</li>
+		<li style="list-style-type:circle;font-size:16px;color:black;">Drawback: cdf may contain inaccurate data leading wrong prob model --> less efficient --> context adaptive</li>
 	</ul>
-		--> context adaptive
+		
 <li style="font-size:140%;color:blue;" >Context Adaptive Arithmetic Coding</li>
 	<ul>
 		<li style="list-style-type:circle;font-size:16px;color:black;"> Inaccurate data--> less efficient but will be recover over time --> how to recover fast?</li>
@@ -54,10 +54,10 @@ date: 2020-05-05
 <li style="font-size:140%;color:blue;" >Introduction to arithmetic coding</li>
 
 <figure>
- <img src='{{site.url}}/images/iid.png' alt='independent and identically distributed definition ' style="width:640;height:320px;" class="center"/>
+ <img src='{{site.url}}/images/iid.png' alt='independent and identically distributed definition ' style="width:680;height:380px;" class="center"/>
  <figcaption>
  	<center>
-Independent and identically distributed
+Independent and identically distributed [wikipedia]
  </center>
  </figcaption>
 </figure>
@@ -67,7 +67,7 @@ Independent and identically distributed
 interval [0, 1).For example a mapping procedure: put 0. before code, and interpreting the result as a number in
 base-D notation</li>
 <figure>
- <img src='{{site.url}}/images/codeValue.png' alt='independent and identically distributed definition ' style="width:640;height:100px;" class="center"/>
+ <img src='{{site.url}}/images/codeValue.png' alt='independent and identically distributed definition ' style="width:400;height:100px;" class="center"/>
  <figcaption>
  	<center>
 Simple Code value generated from coded symbols(base 2 in this case)
@@ -81,7 +81,7 @@ a straight line from point (0, 0) to point (1, 1). The straight-line distributio
 no statistical dependence or redundancy left in the compressed sequences, and consequently
 its code values (the code value will independent) are uniformly distributed on the interval [0, 1). </li>
 <figure>
- <img src='{{site.url}}/images/cdfCodeValue.png' alt='independent and identically distributed definition ' style="width:640;height:320px;" class="center"/>
+ <img src='{{site.url}}/images/cdfCodeValue.png' alt='independent and identically distributed definition ' style="width:500;height:480px;" class="center"/>
  <figcaption>
  	<center>
 Cummulative distribution of code value for diffrent coding scheme.
@@ -101,7 +101,7 @@ in a reduction of the interval length to 20% its current length. This way, after
 of a uniform distribution. Assure the fairness between symbols) </li>
 <li style="list-style-type:circle;font-size:16px;color:black;"> Choose code value by interval value ln: </li>
 <figure>
- <img src='{{site.url}}/images/selectnumberofbit.png' alt='independent and identically distributed definition ' style="width:160;height:80px;" class="center"/>
+ <img src='{{site.url}}/images/selectnumberofbit.png' alt='independent and identically distributed definition ' style="width:120;height:50px;" class="center"/>
  <figcaption>
  	<center>
 Number of bit of code value
@@ -114,10 +114,10 @@ encoder/decoder. when meet this prob --> end) Arithmetic coding guarantee that d
 </ul>
 <li style="font-size:140%;color:blue;" >Optimality of Arithmetic Coding: the bit per symbol converge to entropy of the source</li>
 <figure>
- <img src='{{site.url}}/images/optimality.png' alt='independent and identically distributed definition ' style="width:160;height:160px;" class="center"/>
+ <img src='{{site.url}}/images/optimality.png' alt='independent and identically distributed definition ' style="width:140;height:140px;" class="center"/>
  <figcaption>
  	<center>
-Number of bit of code value
+Average bits per symbol
  </center>
  </figcaption>
 </figure>
@@ -128,14 +128,14 @@ signals {+V, 0, +V, 0, 0, -V, -V, -V} </li>
 </ul>
 <li style="font-size:140%;color:blue;" > Arithmetic Coding Properties </li>
 <ul>
-	<li style="list-style-type:lower-alpha;font-size:16px;color:black;"> Dynamic Sources: generalize arithmetic coding for situations where the probabilities
+	<li style="list-style-type:circle;font-size:16px;color:black;"> Dynamic Sources: generalize arithmetic coding for situations where the probabilities
 change for each symbol coded, i.e., the k-th symbol in the data sequence S is a random
 variable with probabilities pk and distribution ck. For example: Instead of having a single input alphabet with M symbols, we have a sequence of alphabet sizes {M1; M2; : : : ; MN}.</li>
 
-<li style="list-style-type:lower-alpha;font-size:16px;color:black;">Encoder and Decoder Synchronized Decisions: the probability of sequence does not have to transparent to decoder as long as the probability is updated along sequence, from previous decoded symbol.</li>
+<li style="list-style-type:circle;font-size:16px;color:black;">Encoder and Decoder Synchronized Decisions: the probability of sequence does not have to transparent to decoder as long as the probability is updated along sequence, from previous decoded symbol.</li>
 </ul>
 <figure>
- <img src='{{site.url}}/images/sourcemodeling.png' alt='independent and identically distributed definition ' style="width:160;height:160px;" class="center"/>
+ <img src='{{site.url}}/images/sourcemodeling.png' alt='independent and identically distributed definition ' style="width:480;height:480px;" class="center"/>
  <figcaption>
  	<center>
 
@@ -143,33 +143,33 @@ variable with probabilities pk and distribution ck. For example: Instead of havi
  </figcaption>
 </figure>
 
-<li style="list-style-type:lower-alpha;font-size:16px;color:black;">Separation of Coding and Source Modeling: it allows us to develop
+<li style="list-style-type:circle;font-size:16px;color:black;">Separation of Coding and Source Modeling: it allows us to develop
 complex compression schemes without worrying about the details in the coding algorithm,
 and/or use them with difierent coding methods and implementations..</li>
-<li style="list-style-type:lower-alpha;font-size:16px;color:black;">Interval Rescaling: the actual intervals used during coding depend on the initial interval and the previously coded data, but the
+<li style="list-style-type:circle;font-size:16px;color:black;">Interval Rescaling: the actual intervals used during coding depend on the initial interval and the previously coded data, but the
 proportions within subdivided intervals do not. This shows that we can scale interval along with scale code value obtained at a certained level to have a wider interval. And the decoder will need to know information about scaling in order to recover the original code value and start decoding.</li>
-<li style="list-style-type:lower-alpha;font-size:16px;color:black;">
+<li style="list-style-type:circle;font-size:16px;color:black;">
 Approximate Arithmetic: Inexact multiplications are mathematically equivalent to making approximations in the
 source model and then using exact multiplications (see example 7). And we do not have to worry about the inexact probabilities, the decoder can decode the exact input sequence as long as encoder and decoder have the same distribution model i.e., if the decoder is making exactly the
 same approximations as the encoder. Therefore we have to pay the compression performance, the coding archieve the optimal performance only when the distribution of symbol are exactly the same as the real distribution. But the loss to pay is reasonably small if the multiplicationi approximate at 4 digit(shown in equation 1.43)</li>
 
-<li style="list-style-type:lower-alpha;font-size:16px;color:black;">
+<li style="list-style-type:circle;font-size:16px;color:black;">
 Conditions for Correct Decoding:
 <ul>
-	<li style="list-style-type:lower-alpha;font-size:16px;color:black;">The interval length must be positive and intervals must be disjoint. Decode error occurs whenever a code value belongs to the intersection. Or when  then the interval length collapses to zero but  we also have to be sure that all symbol probabilities are larger than a
+	<li style="list-style-type:square;font-size:16px;color:black;">The interval length must be positive and intervals must be disjoint. Decode error occurs whenever a code value belongs to the intersection. Or when  then the interval length collapses to zero but  we also have to be sure that all symbol probabilities are larger than a
 minimum value deflned by the arithmetic precision</li>
-		<li style="list-style-type:lower-alpha;font-size:16px;color:black;">Sub-intervals must be nested: We have to be sure that the accumulation of the approximation errors, as we continue coding
+		<li style="list-style-type:square;font-size:16px;color:black;">Sub-intervals must be nested: We have to be sure that the accumulation of the approximation errors, as we continue coding
 symbols, does not move the interval base to a point outside all the previous intervals. This condition is not guarantee in the approximate case. This solved by setting aside small regions, indicated as gray areas in Figure below, that are
 not used for coding, and serve as a safety net allow the sub interval will always inside the previous interval. With reasonable precision, leakage can be made extremely small. For
 instance, if p(s)=p0(s) = 1:001 (low precision) then leakage is less than 0.0015 bits/symbol.</li>
-<li style="list-style-type:lower-alpha;font-size:16px;color:black;">Inverse arithmetic operations must not produce error accumulation. Decoder also introduce approximate subtraction and division, which have to be consistent with the encoder’s approximations</li>
+<li style="list-style-type:square;font-size:16px;color:black;">Inverse arithmetic operations must not produce error accumulation. Decoder also introduce approximate subtraction and division, which have to be consistent with the encoder’s approximations</li>
 
 </ul>
 
 
 </li>
 <figure>
- <img src='{{site.url}}/images/leakage.png' alt='independent and identically distributed definition ' style="width:160;height:160px;" class="center"/>
+ <img src='{{site.url}}/images/leakage.png' alt='independent and identically distributed definition ' style="width:480;height:480px;" class="center"/>
  <figcaption>
  	<center>
 
