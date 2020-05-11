@@ -193,13 +193,23 @@ instance, if p(s)=p0(s) = 1:001 (low precision) then leakage is less than 0.0015
 	<li style="list-style-type:square;font-size:16px;color:black;"> Problem of implementing the additions in when there is a large difierence between the magnitudes of the
 interval base and interval length. Solved by scaling interval</li>
 <figure>
- <img src='{{site.url}}/images/renomalization.png' alt='independent and identically distributed definition ' style="width:400;height:400px;" class="center"/>
+ <img src='{{site.url}}/images/renomalization.png' alt='independent and identically distributed definition ' style="width:400;height:200px;" class="center"/>
  <figcaption>
  	<center>
-Renomalization scaling,using this we have b in [0,1) and l in (0.5,1]
+Renormalization scaling,using this we have b in [0,1) and l in (0.5,1]
  </center>
  </figcaption>
 </figure>
+
+<figure>
+ <img src='{{site.url}}/images/renomalization.png' alt='independent and identically distributed definition ' style="width:400;height:280px;" class="center"/>
+ <figcaption>
+ 	<center>
+Interval length and base representation.
+ </center>
+ </figcaption>
+</figure>
+
 
 </ul>
 
