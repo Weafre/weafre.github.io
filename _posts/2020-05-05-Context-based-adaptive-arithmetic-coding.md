@@ -128,14 +128,14 @@ Average bits per symbol
 that the sequence S = {2; 1; 0; 0; 1; 3} can be transmitted as the sequence of electrical
 signals {+V, 0, +V, 0, 0, -V, -V, -V} </li>
 </ul>
-<li style="font-size:140%;color:blue;" > Arithmetic Coding Properties </li>
+<li style="font-size:140%;color:blue;" > Arithmetic Coding Properties 
 <ul>
 	<li style="list-style-type:circle;font-size:16px;color:black;"> Dynamic Sources: generalize arithmetic coding for situations where the probabilities
 change for each symbol coded, i.e., the k-th symbol in the data sequence S is a random
 variable with probabilities pk and distribution ck. For example: Instead of having a single input alphabet with M symbols, we have a sequence of alphabet sizes {M1; M2; : : : ; MN}.</li>
 
 <li style="list-style-type:circle;font-size:16px;color:black;">Encoder and Decoder Synchronized Decisions: the probability of sequence does not have to transparent to decoder as long as the probability is updated along sequence, from previous decoded symbol.</li>
-</ul>
+
 <figure>
  <img src='{{site.url}}/images/sourcemodeling.png' alt='independent and identically distributed definition ' style="width:400;height:400px;" class="center"/>
  <figcaption>
@@ -170,6 +170,8 @@ instance, if p(s)=p0(s) = 1:001 (low precision) then leakage is less than 0.0015
 
 
 </li>
+</ul>
+</li>
 <figure>
  <img src='{{site.url}}/images/leakage.png' alt='independent and identically distributed definition ' style="width:400;height:400px;" class="center"/>
  <figcaption>
@@ -185,7 +187,23 @@ instance, if p(s)=p0(s) = 1:001 (low precision) then leakage is less than 0.0015
 <li style="font-size:140%;color:blue;" >Coding with Fixed-Precision Arithmetic
 
 <ul>
-<li style="list-style-type:circle;font-size:16px;color:black;">Coding with Fixed-Precision Arithmetic</li>	
+<li style="list-style-type:circle;font-size:16px;color:black;">Coding with Fixed-Precision Arithmetic:
+<ul>
+	<li style="list-style-type:square;font-size:16px;color:black;"> Problem of precision solved by using P-bits register to save interval length, and results of multiplications, all bit with significance smaller that that bit are truncated.</li>
+	<li style="list-style-type:square;font-size:16px;color:black;"> Problem of implementing the additions in when there is a large difierence between the magnitudes of the
+interval base and interval length. Solved by scaling interval</li>
+<figure>
+ <img src='{{site.url}}/images/renomalization.png' alt='independent and identically distributed definition ' style="width:400;height:400px;" class="center"/>
+ <figcaption>
+ 	<center>
+Renomalization scaling,using this we have b in [0,1) and l in (0.5,1]
+ </center>
+ </figcaption>
+</figure>
+
+</ul>
+
+</li>	
 </ul>
 </li>
 
