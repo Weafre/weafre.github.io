@@ -180,7 +180,7 @@ instance, if p(s)=p0(s) = 1:001 (low precision) then leakage is less than 0.0015
  </center>
  </figcaption>
 </figure>
-<li style="list-style-type:circle;font-size:16px;color:black;">  </li>
+
 
 <h1> Arithmetic Coding Implementation (book)</h1>
 
@@ -230,7 +230,7 @@ Renomalization scaling,using this we have b in [0,1) and l in (0.5,1]
 
 
 
-
+<li style="list-style-type:circle;font-size:16px;color:black;">  </li>
 
 <li style="font-size:140%;color:blue;" >Questions</li>
 <ul>
