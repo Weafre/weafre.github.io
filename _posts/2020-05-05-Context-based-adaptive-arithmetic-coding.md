@@ -4,7 +4,7 @@ title: "Context based adaptive arithmetic coding"
 date: 2020-05-05
 ---
 <ol>
-
+<h1> Arithmetic Coding Introduction</h1>
 <li style="font-size:140%;color:blue;" >Arithmetic Coding </li>
 <ul>
 <li style="list-style-type:circle;font-size:16px;color:black;">Encoding: using cumulative	distribution	function of symbols, fit cdf in a range of symbol in sequence and compute new range until end the sequence. Output is any number between final range </li> 
@@ -51,6 +51,8 @@ date: 2020-05-05
 		Local change: update only on local model/context  
 		Key: do not mix global model and local model like not context coding.(only have one prob model)</p>
 	</ul>
+
+<h1> Introduction to arithmetic coding (book)</h1>
 <li style="font-size:140%;color:blue;" >Introduction to arithmetic coding</li>
 
 <figure>
@@ -178,6 +180,9 @@ instance, if p(s)=p0(s) = 1:001 (low precision) then leakage is less than 0.0015
 </figure>
 <li style="list-style-type:circle;font-size:16px;color:black;">  </li>
 
+<h1> Arithmetic Coding Implementation (book)</h1>
+
+<li style="font-size:140%;color:blue;" >Coding with Fixed-Precision Arithmetic</li>
 
 
 
@@ -203,9 +208,7 @@ instance, if p(s)=p0(s) = 1:001 (low precision) then leakage is less than 0.0015
 
 
 
-
-
-<li style="font-size:140%;color:blue;" >Question</li>
+<li style="font-size:140%;color:blue;" >Questions</li>
 <ul>
 	<li style="list-style-type:circle;font-size:16px;color:black;" >floating point, infinite precision, fixed point</li>
 	<li style="list-style-type:circle;font-size:16px;color:black;">optimal bit/symbol for each symbol = -log2(p(s))</li>
