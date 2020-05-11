@@ -182,7 +182,13 @@ instance, if p(s)=p0(s) = 1:001 (low precision) then leakage is less than 0.0015
 
 <h1> Arithmetic Coding Implementation (book)</h1>
 
-<li style="font-size:140%;color:blue;" >Coding with Fixed-Precision Arithmetic</li>
+<li style="font-size:140%;color:blue;" >Coding with Fixed-Precision Arithmetic
+
+<ul>
+<li style="list-style-type:circle;font-size:16px;color:black;">Coding with Fixed-Precision Arithmetic</li>	
+</ul>
+</li>
+
 
 
 
