@@ -190,31 +190,45 @@ instance, if p(s)=p0(s) = 1:001 (low precision) then leakage is less than 0.0015
 <li style="list-style-type:circle;font-size:16px;color:black;">Coding with Fixed-Precision Arithmetic:
 <ul>
 	<li style="list-style-type:square;font-size:16px;color:black;"> Problem of precision solved by using P-bits register to save interval length, and results of multiplications, all bit with significance smaller that that bit are truncated.</li>
-	<li style="list-style-type:square;font-size:16px;color:black;"> Problem of implementing the additions in when there is a large difierence between the magnitudes of the
-interval base and interval length. Solved by scaling interval</li>
 <figure>
- <img src='{{site.url}}/images/renomalization.png' alt='independent and identically distributed definition ' style="width:400;height:200px;" class="center"/>
+ <img src='{{site.url}}/images/renomalization.png' alt='independent and identically distributed definition ' style="width:400;height:220px;" class="center"/>
  <figcaption>
  	<center>
-Renormalization scaling,using this we have b in [0,1) and l in (0.5,1]
+Renormalization scaling,using this we will always have b in [0,1) and l in (0.5,1]
  </center>
  </figcaption>
 </figure>
 
 <figure>
- <img src='{{site.url}}/images/renomalization.png' alt='independent and identically distributed definition ' style="width:400;height:280px;" class="center"/>
+ <img src='{{site.url}}/images/codestructure.png' alt='independent and identically distributed definition ' style="width:400;height:220px;" class="center"/>
  <figcaption>
  	<center>
-Interval length and base representation.
+Interval length and base in binary representation.
  </center>
  </figcaption>
 </figure>
 
 
+<li style="list-style-type:square;font-size:16px;color:black;"> Problem of implementing the additions in when there is a large difierence between the magnitudes of the
+interval base and interval length. and this can be solved by scaling interval. If we use binary output with limited Precision at P-bit level, we can represent our base and interval length (in binary) into 2 part. Phe first part has already save in buffer (settled and outstanding) and the second part is P bits of current base and interval + insignificant bits treated as zeros. All outstanding bits still can be change during the encoding, even they are already in buffer and they always have the form '01','011', or '0111'.... This come from the fact that:</li>
+<figure>
+ <img src='{{site.url}}/images/maxbase.png' alt='independent and identically distributed definition ' style="width:100;height:60px;" class="center"/>
+ <figcaption>
+ 	<center>
+The child base can not be exceed the upper bound of parent's interval.
+ </center>
+ </figcaption>
+</figure>
+
+
+
 </ul>
 
-</li>	
+</li>
+<li style="list-style-type:circle;font-size:16px;color:black;">Implementation with Bufier Carries: buffer carries means when the next base value (b+c(sk)*l>1), this happend because the interval has been scaled. When b>1, all bits in outstanding part are invert (0 to 1, 1 to 0), and some bits will turn to settle (before '01'). When doing encoding, b>0.5 --> output 1, b<0.5-->output 0. Some key points: sequential repetition of interval
+resizing and renormalizations, use 2 type of renormalization, only have to select code value at final step. See the full algorithm in the book. </li>	
 </ul>
+
 </li>
 
 
