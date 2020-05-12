@@ -228,10 +228,34 @@ The child base can not be exceed the upper bound of parent's interval.
 <li style="list-style-type:circle;font-size:16px;color:black;">Implementation with Bufier Carries: buffer carries means when the next base value (b+c(sk)*l>1), this happend because the interval has been scaled. When b>1, all bits in outstanding part are invert (0 to 1, 1 to 0), and some bits will turn to settle (before '01'). When doing encoding, b>0.5 --> output 1, b<0.5-->output 0. Some key points: sequential repetition of interval
 resizing and renormalizations, use 2 type of renormalization, only have to select code value at final step. See the full algorithm in the book. </li>	
 </ul>
+<figure>
+ <img src='{{site.url}}/images/encoding8bit.png' alt='independent and identically distributed definition ' style="width:40;height:300px;" class="center"/>
+ <figcaption>
+ 	<center>
+
+ </center>
+ </figcaption>
+</figure>
+
 
 </li>
 
+<li style="font-size:140%;color:blue;" >Efficient output: 
+<ul>
+	<li style="list-style-type:circle;font-size:16px;color:black;"> The encoding with short register cost CPU usage to normalize interval, shifting bit, this will cost many CPU cirles. If we use longer register (16 bits for example), we can shift more bit to output buffer and increase precision therefore improve the performance. This equivalent to using D symbols at output alphabet. For example, moving groups of 1, 2, 4, or 8 bits at a time, corresponds to output alphabets
+with D = 2, 4, 16, and 256 symbols, respectively. Only 1 thing change is renormalization step having more threshold theta and smaller number of time interval have to scale. See the book </li>
+<figure>
+ <img src='{{site.url}}/images/encoding16bit.png' alt='independent and identically distributed definition ' style="width:40;height:300px;" class="center"/>
+ <figcaption>
+ 	<center>
 
+ </center>
+ </figcaption>
+</figure>
+
+</ul>
+
+ </li>
 
 
 
