@@ -282,12 +282,14 @@ Update distribution based on occurence of previously encoded symbols</li>
 
 </ul>
 </li>
-<li style="font-size:140%;color:blue;" >Direct Update of Cumulative Distributions: update cummulative distribution of each occurence symbol c(s)/c(M). (actually save the counter of each symbol C(s) and counter of total symbol c(M))
+<li style="font-size:140%;color:blue;" >Direct Update of Cumulative Distributions </li>
+<p> Update cummulative distribution of each occurence symbol c(s)/c(M). (actually save the counter of each symbol C(s) and counter of total symbol c(M))
+</p>
 
-</li>
-<li style="font-size:140%;color:blue;" >Binary Arithmetic Coding: Advantages: simple when coding and updating cumulative distribution. But the computation will easyly overhead because generate bit can not be larger than 1bit per coded symbol (mean one bit per few CPU circle). Figure below shows how the process of coding data from a 6-symbol
+<li style="font-size:140%;color:blue;" >Binary Arithmetic Coding: Advantages </li>
+<p> Simple when coding and updating cumulative distribution. But the computation will easyly overhead because generate bit can not be larger than 1bit per coded symbol (mean one bit per few CPU circle). Figure below shows how the process of coding data from a 6-symbol
 source can be decomposed in a series of binary decisions. (example how to encode 6 symbols data using binary arithmetic coding: represent it by binary search tree and apply arithmetic cododing in the end of each leaf). Sequential tree: leaf are orderd from 0 to 5
-</li>
+</p>
 <figure>
  <img src='{{site.url}}/images/binarytree.png' alt='independent and identically distributed definition ' style="width:40;height:300px;" class="center"/>
  <figcaption>
@@ -296,6 +298,19 @@ Sequential binary tree
  </center>
  </figcaption>
 </figure>
+
+<figure>
+ <img src='{{site.url}}/images/binarytree2.png' alt='independent and identically distributed definition ' style="width:40;height:300px;" class="center"/>
+ <figcaption>
+ 	<center>
+Bisection binary tree (This tree
+has been designed to minimize the average number of binary
+symbols to be coded)
+ </center>
+ </figcaption>
+</figure>
+<li style="font-size:140%;color:blue;" >Tree-based Update of Cumulative Distributions
+</li>
 
 
 
