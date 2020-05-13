@@ -333,10 +333,13 @@ distribution estimate (c) periodically. The period R can be several number of M 
 <li style="font-size:140%;color:blue;" >Complexity Analysis
 </li>
 <p>
- Reduce the complexity by updating the cdf periodly (it is good for example when encoding image with \constant," \smooth," \edge," \high-frequency
-pattern," etc. ). A signiflcantly more efficient form of adaptive arithmetic coding updates
-only the vector with symbol occurrence counters (P ~) after each symbol, and updates the
-distribution estimate (c) periodically. The period R can be several number of M (R=4M). But to improve the accuracy while having low complexity, can have a high frequency in the beginning and reduce it gradually.
+Arithmetic coding was considered little
+more than a mathematical curiosity because the additions made it slow, multiplications
+made it very expensive, and divisions made it impractical. The speed of arithmetic coding needs to be measured by the rate of data (true information) bits coming out of the encoder, or into the decoder (information throughput). For
+example, binary coders can be very simple and fast, but their throughput is limited to a fraction of bits per CPU clock cycle. Four main factors that influence complexity: 1. Interval renormalization and compressed data input and output.
+2. Symbol search.
+3. Statistics estimation (adaptive models only).
+4. Arithmetic operations.
 </p>
 
 
