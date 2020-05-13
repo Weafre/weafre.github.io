@@ -238,7 +238,7 @@ resizing and renormalizations, use 2 type of renormalization, only have to selec
 </figure>
 
 
-</li>
+
 
 <li style="font-size:140%;color:blue;" >Efficient output: 
 <ul>
@@ -257,8 +257,12 @@ with D = 2, 4, 16, and 256 symbols, respectively. Only 1 thing change is renorma
 
  </li>
 
+<li style="font-size:140%;color:blue;" >Alternative Renormalizations: to keep interval at diffrent interval [0.5 -1] or [0.75-1.5]...
+</li>
 
-
+<li style="font-size:140%;color:blue;" >Alternative Renormalizations: to keep interval at diffrent interval [0.5 -1] or [0.75-1.5]...
+</li>
+</li>
 
 
 
