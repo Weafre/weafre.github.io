@@ -282,6 +282,20 @@ Update distribution based on occurence of previously encoded symbols</li>
 
 </ul>
 </li>
+<li style="font-size:140%;color:blue;" >Direct Update of Cumulative Distributions: update cummulative distribution of each occurence symbol c(s)/c(M). (actually save the counter of each symbol C(s) and counter of total symbol c(M))
+
+</li>
+<li style="font-size:140%;color:blue;" >Binary Arithmetic Coding: Advantages: simple when coding and updating cumulative distribution. But the computation will easyly overhead because generate bit can not be larger than 1bit per coded symbol (mean one bit per few CPU circle). Figure below shows how the process of coding data from a 6-symbol
+source can be decomposed in a series of binary decisions. (example how to encode 6 symbols data using binary arithmetic coding: represent it by binary search tree and apply arithmetic cododing in the end of each leaf). Sequential tree: leaf are orderd from 0 to 5
+</li>
+<figure>
+ <img src='{{site.url}}/images/binarytree.png' alt='independent and identically distributed definition ' style="width:40;height:300px;" class="center"/>
+ <figcaption>
+ 	<center>
+Sequential binary tree
+ </center>
+ </figcaption>
+</figure>
 
 
 
