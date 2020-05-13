@@ -260,13 +260,28 @@ with D = 2, 4, 16, and 256 symbols, respectively. Only 1 thing change is renorma
 <li style="font-size:140%;color:blue;" >Alternative Renormalizations: to keep interval at diffrent interval [0.5 -1] or [0.75-1.5]...
 </li>
 
-<li style="font-size:140%;color:blue;" >Alternative Renormalizations: to keep interval at diffrent interval [0.5 -1] or [0.75-1.5]...
-</li>
 </li>
 
+<h1> Adaptive Coding (book)</h1>
+<p> To have a good compression rate, we need to have a good model of data source, but information sources are normaly complex. Modeling
+complex sources by decompose the source data in difierent categories with assumption: in each category the source symbols are approximately
+independent and identically distributed. In general, we do not know the probabilities of the symbols in each category. Adaptive coding estimate the probability of symbol while encoding the source. Adaptive arithmetic coding = dynamic probability estimation + arithmetic coding.</p>
+<li style="font-size:140%;color:blue;" >Strategies for Computing Symbol Distributions
+<ul>
+<li style="list-style-type:circle;font-size:16px;color:black;">  
+Use a fixed probability model extracted from exist data source, typical data. This approach can be efficient in some case but typically the model is not dynamic (the model for english text is not fit for spanish text) or incorrect when apply for another sources which require model extracted from very large amount of data (overfitting or underfitting). 
+</li>
+<li style="list-style-type:circle;font-size:16px;color:black;">  
+Use predefined distribution with parameter estimated from realdata. For example, assume data has Gaussian distribution and estimate mean and standard.
+</li>
+<li style="list-style-type:circle;font-size:16px;color:black;">  
+Two-pass encoding, first pass will do statistic analysis about the source, the second pass use the model from the first pass and encode it. And the vector p or c are passed to decoder. Disavantage: computation overhead. but have a good compression rate.
+</li>
+<li style="list-style-type:circle;font-size:16px;color:black;">  
+Update distribution based on occurence of previously encoded symbols</li>
 
-
-
+</ul>
+</li>
 
 
 
