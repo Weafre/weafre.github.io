@@ -286,8 +286,8 @@ Update distribution based on occurence of previously encoded symbols</li>
 <p> Update cummulative distribution of each occurence symbol c(s)/c(M). (actually save the counter of each symbol C(s) and counter of total symbol c(M))
 </p>
 
-<li style="font-size:140%;color:blue;" >Binary Arithmetic Coding: Advantages </li>
-<p> Simple when coding and updating cumulative distribution. But the computation will easyly overhead because generate bit can not be larger than 1bit per coded symbol (mean one bit per few CPU circle). Figure below shows how the process of coding data from a 6-symbol
+<li style="font-size:140%;color:blue;" >Binary Arithmetic Coding:  </li>
+<p>Advantages: Simple when coding and updating cumulative distribution. But the computation will easyly overhead because generate bit can not be larger than 1bit per coded symbol (mean one bit per few CPU circle). Figure below shows how the process of coding data from a 6-symbol
 source can be decomposed in a series of binary decisions. (example how to encode 6 symbols data using binary arithmetic coding: represent it by binary search tree and apply arithmetic cododing in the end of each leaf). Sequential tree: leaf are orderd from 0 to 5
 </p>
 <figure>
@@ -311,9 +311,33 @@ symbols to be coded)
 </figure>
 <li style="font-size:140%;color:blue;" >Tree-based Update of Cumulative Distributions
 </li>
+<p>
+	We show that we can use binary-search trees to efficiently
+combine computing the cumulative distribution, updating it, encoding and decoding, without
+having to use a binary arithmetic encoder. From occuren counter we can compute cummulative distribution and use the computed values for encoding
+and decoding.  Tree-based updating techniques that reduce this
+complexity very signiflcantly.
+</p>
+??What is advantages of this technique? and how Tree-based updating techniques that reduce this
+complexity very signiflcantly.
 
+<li style="font-size:140%;color:blue;" >Periodic Updates of the Cumulative Distribution
+</li>
+<p>
+ Reduce the complexity by updating the cdf periodly (it is good for example when encoding image with \constant," \smooth," \edge," \high-frequency
+pattern," etc. ). A signiflcantly more efficient form of adaptive arithmetic coding updates
+only the vector with symbol occurrence counters (P ~) after each symbol, and updates the
+distribution estimate (c) periodically. The period R can be several number of M (R=4M). But to improve the accuracy while having low complexity, can have a high frequency in the beginning and reduce it gradually.
+</p>
 
-
+<li style="font-size:140%;color:blue;" >Complexity Analysis
+</li>
+<p>
+ Reduce the complexity by updating the cdf periodly (it is good for example when encoding image with \constant," \smooth," \edge," \high-frequency
+pattern," etc. ). A signiflcantly more efficient form of adaptive arithmetic coding updates
+only the vector with symbol occurrence counters (P ~) after each symbol, and updates the
+distribution estimate (c) periodically. The period R can be several number of M (R=4M). But to improve the accuracy while having low complexity, can have a high frequency in the beginning and reduce it gradually.
+</p>
 
 
 
